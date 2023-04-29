@@ -20,34 +20,6 @@
 
 	</div>
 
-
-	<script src="https://yandex.ru/games/sdk/v2"></script>
-	<script>
-		var lb;
-		var player;
-		
-		YaGames
-		.init()
-		.then(ysdk => {
-			console.log('Yandex SDK initialized');
-			window.ysdk = ysdk;
-			InitPlayer();
-			ysdk.adv.showFullscreenAdv();
-			ysdk.features.LoadingAPI?.ready();
-		});
-
-		function InitPlayer() {
-	    ysdk.getPlayer().then(_player => {
-	        player = _player;
-	    }).catch(err => {
-	        console.log('player ERROR');
-	    });
-  	}
-
-	</script>
-
-
-
 	<script>
 		var container = document.querySelector("#unity-container");
 		var canvas = document.querySelector("#unity-canvas");
